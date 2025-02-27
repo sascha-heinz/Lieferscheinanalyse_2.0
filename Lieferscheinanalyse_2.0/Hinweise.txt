@@ -1,0 +1,24 @@
+Hinweise:
+
+- Den gesamten Ordner "Lieferscheinanalyse" kopieren und irgendwo bei sich ablegen, dann nutzen
+- Alle Dateien innerhalb des Ordners "Lieferscheinanalyse" dürfen nicht verschoben werden. Der Name der Dateien darf nicht geändert werden</li>
+- Scanner auf 150x150px stellen (Wichtig! Die QR-Code-Erkennung ist für diese Auflösung optimiert) und das Dateiformat JPEG einstellen (wo standartmäßig PDF steht)</li>
+- Da es sich um JPEG handelt, werden die Lieferscheine alle als einzelne Fotos in einer gemeinsamen Mail gesendet. Alle Fotos in einem Ordner lokal speichern</li>
+- Die Lieferscheinanalyse-Datei im Browser öffnen und jpg's auswählen (JPEG und jpg sind dasselbe)</li>
+- Es können mehrere jpg's ausgewählt werden, jedoch nur vom selben Lieferanten. Keine Lieferscheine von unterschiedlichen Lieferanten mischen</li>
+- Das Fenster muss während der Analyse geöffnet sein! Beim Verlassen des Tabs oder Minimieren des Fensters wird die Ausführung blockiert (Sicherheitsrichtlinien des Browsers)</li>
+- Für manche Lieferscheine braucht das Programm etwas länger. Geduld haben, nicht rumklicken</li>
+- Sobald eine Datei analysiert wurde, in Excel exportieren. Zurücksetzen, um neue Datei zu analysieren</li>
+- Wenn das Programm Lieferscheine nicht auslesen konnte, erscheint unter der Tabelle eine Infobox mit Angabe der Dateien</li>
+- Die Daten sind in der Excel-Datei bereits in einer Tabelle erfasst (können also gefiltert werden), sind jedoch teilweise unformatiert. Bitte darauf achten bei weiterer Verwendung</li>
+
+
+
+Neues in Version 2.0
+
+- PDF als Dateiformat für die Analyse hat sich als schwierig erwiesen. Die Analyse läuft jetzt mit dem jpg-Dateiformat. Dies hat die Erkennung deutlich verbessert. 
+  Hierzu muss beim Drucker bei den Scaneinstellung JPEG statt PDF gewählt werden.
+- Die Tabelle im Browser wird in einen Container mit fixer Größe geschrieben, um das Browserfenster nicht unnötig zu vergrößern.
+- Bei nicht erkannten QR-Codes wird eine Infobox unterhalb des Containers mit der Tabelle gezeigt, statt einem Pop-Up.
+- Die Daten in der exportierten Excel werden gleich in eine Tabelle geschrieben. Es kann sofort gefiltert werden.
+- Die Buttons werden in Abhängigkeit des Status aktiviert bz. deaktiviert, um ein verklicken oder doppelklicken vorzubeugen. 
