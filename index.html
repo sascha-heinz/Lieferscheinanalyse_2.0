@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lieferscheinanalyse</title>
+    <link rel="stylesheet" href="assets/index.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Lieferscheinanalyse</h1>
+            <a href="assets/Impressum.html">Impressum & Datenschutzerklärung</a>
+            <div class="Hinweise">
+                <ul>
+                    <li>Diese Seite wurde nicht für Smartphones oder Tablets optimiert! (Diese Seite ist nicht responsiv)</li>
+                    <li>Den gesamten Ordner "Lieferscheinanalyse" kopieren und irgendwo bei sich ablegen, dann nutzen</li>
+                    <li>Alle Dateien innerhalb des Ordners "Lieferscheinanalyse" dürfen nicht verschoben werden. Der Name der Dateien darf nicht geändert werden</li>
+                    <li>Scanner auf 150x150px stellen (Wichtig! Die QR-Code-Erkennung ist für diese Auflösung optimiert) und das Dateiformat JPEG einstellen (wo standartmäßig PDF steht)</li>
+                    <li>Da es sich um JPEG handelt, werden die Lieferscheine alle als einzelne Fotos in einer gemeinsamen Mail gesendet. Alle Fotos in einem Ordner lokal speichern</li>
+                    <li>Die Lieferscheinanalyse-Datei (index.html) im Browser öffnen und jpg's auswählen (JPEG und jpg sind dasselbe)</li>
+                    <li>Es können mehrere jpg's ausgewählt werden, jedoch nur vom selben Lieferanten. Keine Lieferscheine von unterschiedlichen Lieferanten mischen</li>
+                    <li>Das Fenster muss während der Analyse geöffnet sein! Beim Verlassen des Tabs oder Minimieren des Fensters wird die Ausführung blockiert (Sicherheitsrichtlinien des Browsers)</li>
+                    <li>Für manche Lieferscheine braucht das Programm etwas länger. Geduld haben, nicht rumklicken</li>
+                    <li>Sobald eine Datei analysiert wurde, in Excel exportieren. Zurücksetzen, um neue Datei zu analysieren</li>
+                    <li>Wenn das Programm Lieferscheine nicht auslesen konnte, erscheint unter der Tabelle eine Infobox mit Angabe der Dateien</li>
+                    <li>Die Daten sind in der Excel-Datei bereits in einer Tabelle erfasst (können also gefiltert werden), sind jedoch teilweise unformatiert. Bitte darauf achten bei weiterer Verwendung</li>
+                </ul>
+            </div>
+            <div class="buttons">
+                <button class="button" id="uploadBtn">jpg's einfügen</button>
+                <button class="button" id="analyzeBtn" disabled>Analyse starten</button>
+                <button class="button" id="exportBtn" disabled>Export Excel</button>
+                <button class="button" id="resetBtn">Zurücksetzen</button>
+            </div>
+            <div class="progress-container">
+                <p id="file-message" style="display: none;"></p> <!-- Hier das Datei-Info-Element hinzufügen -->
+                <progress id="progressBar" value="0" max="100"></progress>
+            </div>
+        </header>
+
+        <div id="table-container">
+            <!-- Tabelle wird hier dynamisch eingefügt -->
+        </div>
+        <div id="info-box">
+            <!-- Infokasten für Fehler oder Erfolgsmeldungen -->
+        </div>
+    </div>
+
+
+        
+
+    <input type="file" id="fileInput" accept="image/jpeg" multiple style="display:none" />
+
+    <script src="assets/libs/jsQR.min.1.4.0.js"></script>
+    <script src="assets/libs/xlsx.full.min.0.18.15.js"></script>
+    <script src="assets/script.js"></script>
+</body>
+</html>
